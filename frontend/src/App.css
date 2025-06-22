@@ -1,0 +1,422 @@
+/* General App Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main App Container */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content-container {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+/* Basic Components */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.input, .textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #001f3f; /* Navy */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid #003366;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    margin-top: 1rem;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.sidebar-nav a:hover {
+    background-color: #003366;
+    text-decoration: none;
+}
+
+.sidebar-nav a.active {
+    background-color: #0056b3;
+    font-weight: bold;
+}
+
+.sidebar-footer {
+    border-top: 1px solid #003366;
+    padding-top: 1rem;
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.user-profile p {
+    margin: 0.25rem 0;
+}
+
+.user-profile .username {
+    font-weight: bold;
+}
+
+.user-profile .points {
+    font-size: 0.9rem;
+    color: #f0ad4e; /* Gold */
+}
+
+/* Home Page Styles */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.homepage h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.homepage .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.homepage .auth-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.homepage .auth-links .button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+}
+
+.homepage .dashboard-link a {
+    font-size: 1.1rem;
+}
+
+/* Auth Form Styles */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-form h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.auth-form .subtitle {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-form .form-footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Stepper for Register Page */
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.step {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border: 2px solid #ccc;
+}
+
+.step-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.step.active .step-number {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.step.active .step-label {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+/* Dashboard & Cards */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.quest-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quest-card .card-content {
+    flex-grow: 1;
+}
+
+.quest-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.quest-card .description {
+    color: #555;
+    margin-bottom: 1rem;
+    min-height: 60px; /* Provides consistent card height */
+}
+
+.quest-card .tags {
+    margin-bottom: 1rem;
+}
+
+.quest-card .tag {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.quest-card .card-footer {
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+/* Rewards Page */
+.user-points-card {
+    background-color: #001f3f; /* Navy */
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.user-points-card .points-value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.reward-cost {
+    font-weight: bold;
+    color: #28a745; /* Green */
+    margin-bottom: 1rem;
+}
+
+/* Reflections Page */
+.reflection-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.reflection-card .date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.reflection-card audio {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #333;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
